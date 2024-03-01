@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+ <html lang="en">
+ <link rel="stylesheet" type="text/css" href="style.css">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced CSS - Assignment 1</title>
+    <style>
+     /* Zadatak 1: Obojiti tekst svih linkova koji upućuju na Google u zeleno */
+         a[href*="google"] {
+        color: green;
+    }
+
+    /* Zadatak 2: Obojiti tekst linka koji upućuje na LINK group web sajt u crveno */
+         a[href*="link-group"] {
+        color: red;
+    }
+
+    /* Zadatak 3: Paragrafe unutar second-div obojiti naizmenično u crveno i plavo */
+          #second-div p:nth-child(odd) {
+        color: blue;
+    }
+
+          #second-div p:nth-child(even) {
+        color: red;
+    }
+
+    /* Zadatak 4: Dodati tekst NEW na krajeve Paragrafa 2 i Paragrafa 3, žute boje */
+          #first-div p:nth-child(2):after,
+          #first-div p:nth-child(3):after {
+        content: " NEW";
+        color: yellow;
+    }
+
+    /* Zadatak 5: Prelazak miša preko Paragraph 10 elementa, tekst postaje italic */
+           p:last-child:hover {
+        font-style: italic;
+    }
+
+
+    </style>
+</head>
+
+<body>
+    <h1>Main Heading</h1>
+    <p>Paragraph 1</p>
+    <a href="https://www.google.com/">Google</a>
+    <a href="https://www.google.com/doodles">Google Doodles</a>
+    <a href="https://www.link-group.eu/" target="_blank">Goto Link Group</a>
+    <div id="first-div">
+        <h2>Subheading</h2>
+        <p>Paragraph 2</p>
+        <p>Paragraph 3</p>
+        <div id="second-div">
+            <h3>Sub subheading</h3>
+            <p>Paragraph 4</p>
+            <p>Paragraph 5</p>
+            <p>Paragraph 6</p>
+            <p>Paragraph 7</p>
+            <p>Paragraph 8</p>
+        </div>
+    </div>
+    <p>Paragraph 9</p>
+    <p>Paragraph 10</p>
+</body>
+
+</html>
