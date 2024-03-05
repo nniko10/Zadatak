@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.galerija {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 15px;
+}
+
+.slika-box {
+    border: 1px solid #ccc;
+    margin: 15px;
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    width: 200px;
+    border-radius: 10px;
+    overflow: hidden; 
+}
+
+.slika-box:hover {
+    transform: scale(1.05);
+}
+
+.slika-box img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ccc;
+    margin: 0; 
+    padding: 0;
+}
+
+.slika-tekst {
+    margin-top: 10px;
+}
+
+/* Responsivan dizajn za tablete */
+@media (max-width: 768px) {
+    .slika-box {
+        width: 30%;
+    }
+}
+
+/* Responsivan dizajn za mobilne telefone */
+@media (max-width: 480px) {
+    .slika-box {
+        width: 100%;
+    }
+}
